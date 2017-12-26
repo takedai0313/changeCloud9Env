@@ -1,0 +1,8 @@
+{
+    "switchcloud9env": {
+        "lambda": {
+            "name": "hayato_taiko",
+            "lang": "nodejs"
+        }
+    }
+}
