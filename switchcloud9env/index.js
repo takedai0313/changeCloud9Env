@@ -7,6 +7,8 @@ const cloud9 = new AWS.Cloud9({
     region: 'ap-southeast-1'
 });
 
+AWS.config.loadFromPath('./configure.json');
+
 exports.handler = (event, context, callback) => {
     const env = JSON.parse(fs.readFileSync(process.env.cloud9Env, 'utf8'));
     const envList = env.envList;
@@ -37,5 +39,5 @@ exports.handler = (event, context, callback) => {
             });
         }
     });
-    callback();
+    callback(null);
 };
